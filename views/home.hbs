@@ -1,2 +1,299 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+<h1>Memphis</h1>
+<span><a href="/users/117">view my profile</a></span>
+<span>20 microposts</span>
+
+      </section>
+      <section class="stats">
+        <div class="stats">
+  <a href="/users/117/following">
+    <strong id="following" class="stat">
+      0
+    </strong>
+    following
+  </a>
+  <a href="/users/117/followers">
+    <strong id="followers" class="stat">
+      0
+    </strong>
+    followers
+  </a>
+</div>
+
+      </section>
+      <section class="micropost_form">
+        <form enctype="multipart/form-data" action="/microposts" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="wt+CsH2FKPHP8REyEaLuIrx3fhLxndMwiJ5VvUYFXiwQ+V0P+Rs8u19WCC4YSnOIakwihjIzjPrvZ8fDCZCeEA==" />
+  
+  <div class="field">
+    <textarea placeholder="Compose new micropost..." name="micropost[content]" id="micropost_content">
+</textarea>
+  </div>
+  <input type="submit" name="commit" value="Post" class="btn btn-primary" data-disable-with="Post" />
+  <span class="image">
+    <input accept="image/jpeg,image/gif,image/png" type="file" name="micropost[image]" id="micropost_image" />
+  </span>
+</form>
+<script type="text/javascript">
+  $("#micropost_image").bind("change", function() {
+    const size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert("Maximum file size is 5MB. Please choose a smaller file.");
+      $("#micropost_image").val("");
+    }
+  });
+</script>
+
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3>Micropost Feed</h3>
+        <ol class="microposts">
+    <li id="micropost-326">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    sadsadsad
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/326">delete</a>
+  </span>
+</li>
+<li id="micropost-325">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    sdsadsad
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/325">delete</a>
+  </span>
+</li>
+<li id="micropost-324">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    sadsadsadsads
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/324">delete</a>
+  </span>
+</li>
+<li id="micropost-323">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    sadsadsadsa
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/323">delete</a>
+  </span>
+</li>
+<li id="micropost-322">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    sadsad
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/322">delete</a>
+  </span>
+</li>
+<li id="micropost-321">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    sadsad
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/321">delete</a>
+  </span>
+</li>
+<li id="micropost-320">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    asdsad
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/320">delete</a>
+  </span>
+</li>
+<li id="micropost-319">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    sdsada
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/319">delete</a>
+  </span>
+</li>
+<li id="micropost-318">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    sadsad
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/318">delete</a>
+  </span>
+</li>
+<li id="micropost-317">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    sadsad
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/317">delete</a>
+  </span>
+</li>
+<li id="micropost-316">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    sadsad
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/316">delete</a>
+  </span>
+</li>
+<li id="micropost-315">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    sadsad
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/315">delete</a>
+  </span>
+</li>
+<li id="micropost-314">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    sadsad
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/314">delete</a>
+  </span>
+</li>
+<li id="micropost-313">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    asdsad
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/313">delete</a>
+  </span>
+</li>
+<li id="micropost-312">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    sadsad
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/312">delete</a>
+  </span>
+</li>
+<li id="micropost-311">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    adsad
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/311">delete</a>
+  </span>
+</li>
+<li id="micropost-310">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    asdsa
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/310">delete</a>
+  </span>
+</li>
+<li id="micropost-309">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    sdsad
+    
+  </span>
+  <span class="timestamp">
+    Posted about 21 hours ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/309">delete</a>
+  </span>
+</li>
+<li id="micropost-308">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    sdsad
+    <img src="https://mysterious-atoll-47182.herokuapp.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6ae5eed0be37c5da306276eab32486cead31a098/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFMMEFXa0M5QUU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--6d55e7e7bf74678a5689cacc876ed22e9c7daeb0/Screenshot%20(1).png" />
+  </span>
+  <span class="timestamp">
+    Posted 12 days ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/308">delete</a>
+  </span>
+</li>
+<li id="micropost-307">
+  <a href="/users/117"><img alt="Memphis" class="gravatar" src="https://secure.gravatar.com/avatar/cacb9adf6927b855f6eeac2ca0e27d52?s=50" /></a>
+  <span class="user"><a href="/users/117">Memphis</a></span>
+  <span class="content">
+    dsad
+    
+  </span>
+  <span class="timestamp">
+    Posted 12 days ago.
+      <a data-confirm="You sure?" rel="nofollow" data-method="delete" href="/microposts/307">delete</a>
+  </span>
+</li>
+
+  </ol>
+  
+
+    </div>
+  </div>
