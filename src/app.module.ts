@@ -6,13 +6,15 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { SessionsModule } from './controllers/sessions/sessions.module';
 import { UsersModule } from './controllers/users/users.module';
 import { MicropostsModule } from './controllers/microposts/microposts.module';
+import { RelationshipsModule } from './controllers/relationships/relationships.module';
 
 @Module({
   imports: [
   UsersModule,
   ContactsModule,
   SessionsModule,  
-  MicropostsModule,     
+  MicropostsModule,   
+  RelationshipsModule,  
   TypeOrmModule.forRoot({
     type: 'sqlite',
     database: 'db',

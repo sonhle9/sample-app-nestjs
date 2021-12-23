@@ -1,10 +1,22 @@
-import { Body, Controller, Get, Param, Patch } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
 
 export interface UserUpdateField {
   name: string
   email: string
   password: string
   password_confirmation: string
+}
+
+export interface ListResponse<User> {
+  users: User[]
+  total_count: number
+}
+
+export interface User {
+  readonly id: number
+  name: string
+  gravatar_id: string
+  size: number
 }
 
 @Controller('users')
@@ -17,7 +29,13 @@ export class UsersController {
 
     @Get(':id')
     show(): Promise<{}> {
-      const json = {"user":{"id":1,"name":"Example User","gravatar_id":"bebfcf57d6d8277d806a9ef3385c078d","size":80,"following":46,"followers":36,"current_user_following_user":false},"id_relationships":null,"microposts":[{"id":449,"user_id":1,"content":"dsf","timestamp":"4 days"},{"id":448,"user_id":1,"content":"sadsad","timestamp":"6 days"},{"id":447,"user_id":1,"content":"hgfhgfhg","timestamp":"25 days"},{"id":446,"user_id":1,"content":"tfdtg","timestamp":"25 days"},{"id":445,"user_id":1,"content":"ddsad","timestamp":"25 days"}],"total_count":66};
+      const json = {"user":{"id":1,"name":"Example User","gravatar_id":"bebfcf57d6d8277d806a9ef3385c078d","size":80,"following":46,"followers":36,"current_user_following_user":Math.random() < 0.5},"id_relationships":1,"microposts":[{"id":449,"user_id":1,"content":"dsf","timestamp":"4 days"},{"id":448,"user_id":1,"content":"sadsad","timestamp":"6 days"},{"id":447,"user_id":1,"content":"hgfhgfhg","timestamp":"25 days"},{"id":446,"user_id":1,"content":"tfdtg","timestamp":"25 days"},{"id":445,"user_id":1,"content":"ddsad","timestamp":"25 days"}],"total_count":66};
+      return Promise.resolve(json);
+    }
+
+    @Post('')
+    create(): Promise<{}> {
+      const json = {"flash":["info","Please check your email to activate your account."],"user":{}};
       return Promise.resolve(json);
     }
 
@@ -34,6 +52,12 @@ export class UsersController {
         // return this.contactsService.update(contactData);
       const json = {"flash_success":["success","Profile updated"]};
       // const json = {"error":["Password confirmation doesn't match Password"]};
+      return Promise.resolve(json);
+    }
+
+    @Delete(':id')
+    async destroy(@Param('id') id): Promise<any> {
+      const json = {"flash":["success","User deleted"]};
       return Promise.resolve(json);
     }  
 }
