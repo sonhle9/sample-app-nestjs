@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ContactsModule } from './controllers/contacts/contacts.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { SessionsModule } from './controllers/sessions/sessions.module';
 import { UsersModule } from './controllers/users/users.module';
@@ -11,7 +10,6 @@ import { RelationshipsModule } from './controllers/relationships/relationships.m
 @Module({
   imports: [
   UsersModule,
-  ContactsModule,
   SessionsModule,  
   MicropostsModule,   
   RelationshipsModule,  
