@@ -1,21 +1,28 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { MicropostsService } from './controllers/microposts/microposts.service';
-import { MicropostsModule } from './controllers/microposts/microposts.module';
-import { AccountActivationsService } from './controllers/account-activations/account-activations.service';
-import { AccountActivationsController } from './controllers/account-activations/account-activations.controller';
-import { AccountActivationsModule } from './controllers/account-activations/account-activations.module';
-import { PasswordResetsService } from './controllers/password-resets/password-resets.service';
-import { RelationshipsModule } from './controllers/relationships/relationships.module';
-import { SessionsModule } from './controllers/sessions/sessions.module';
-import { UsersController } from './controllers/users/users.controller';
-import { UsersService } from './controllers/users/users.service';
-import { UsersModule } from './controllers/users/users.module';
+import { PasswordResetsModule } from './password-resets/password-resets.module';
+import { MicropostsModule } from './microposts/microposts.module';
+import { AccountActivationsModule } from './account-activations/account-activations.module';
+import { RelationshipsModule } from './relationships/relationships.module';
+import { SessionsModule } from './sessions/sessions.module';
+import { UsersModule } from './users/users.module';
+import { RelationshipsService } from './relationships/relationships.service';
+import { SessionsService } from './sessions/sessions.service';
+import { MicropostsService } from './microposts/microposts.service';
+import { AccountActivationsService } from './account-activations/account-activations.service';
+import { PasswordResetsService } from './password-resets/password-resets.service';
+import { UsersService } from './users/users.service';
+import { AccountActivationsController } from './account-activations/account-activations.controller';
+import { UsersController } from './users/users.controller';
+import { MicropostsController } from './microposts/microposts.controller';
+import { RelationshipsController } from './relationships/relationships.controller';
+import { SessionsController } from './sessions/sessions.controller';
+import { PasswordResetsController } from './password-resets/password-resets.controller';
 
 @Module({
-  imports: [MicropostsModule, AccountActivationsModule, RelationshipsModule, SessionsModule, UsersModule],
-  controllers: [AppController, AccountActivationsController, UsersController],
-  providers: [AppService, MicropostsService, AccountActivationsService, PasswordResetsService, UsersService],
+  imports: [MicropostsModule, AccountActivationsModule, PasswordResetsModule, RelationshipsModule, SessionsModule, UsersModule],
+  controllers: [AppController, MicropostsController, AccountActivationsController, PasswordResetsController, RelationshipsController, SessionsController, UsersController],
+  providers: [AppService, MicropostsService, AccountActivationsService, PasswordResetsService, RelationshipsService, SessionsService, UsersService],
 })
 export class AppModule {}
