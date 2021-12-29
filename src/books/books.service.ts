@@ -11,7 +11,7 @@ export class BooksService {
 
   }
 
-  async create(data: CreateBookDto): Promise<Book> {
+  async create(data: CreateBookDto) {
     return this.prisma.book.create({
       data
     })

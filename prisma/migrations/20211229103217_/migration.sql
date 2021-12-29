@@ -25,11 +25,7 @@ CREATE TABLE "User" (
 -- CreateTable
 CREATE TABLE "Micropost" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    "content" TEXT NOT NULL,
-    "user_id" INTEGER,
-    "created_at" DATETIME NOT NULL,
-    "updated_at" DATETIME NOT NULL,
-    CONSTRAINT "Micropost_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "User" ("id") ON DELETE SET NULL ON UPDATE CASCADE
+    "content" TEXT NOT NULL
 );
 
 -- CreateTable

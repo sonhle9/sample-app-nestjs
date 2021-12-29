@@ -7,7 +7,7 @@ export class SessionsController {
 
     @Get()
     index(): Promise<{}> {
-      const json = {"user":{"id":1,"name":"Example User","admin":true,"email":"example@railstutorial.org"}};
+      const json = {"user":{"id":1,"name":"Example Userr","admin":true,"email":"example@railstutorial.org"}}
       return Promise.resolve(json);
     }
     

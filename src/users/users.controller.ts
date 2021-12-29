@@ -40,19 +40,15 @@ export class UsersController {
       return Promise.resolve(json);
     }
 
-    // @Patch(':id')
-    // async update(@Param('id') id, @Body() contactData: UserUpdateField): Promise<any> {
-    //     // contactData.id = Number(id);
-    //     // console.log('Update #' + contactData.id)
-    //     // return this.contactsService.update(contactData);
-    //   const json = {"flash_success":["success","Profile updated"]};
-    //   // const json = {"error":["Password confirmation doesn't match Password"]};
-    //   return Promise.resolve(json);
-    // }
+    @Patch(':id')
+    async update(): Promise<{}> {
+      const json = {"flash_success":["success","Profile updated"]};
+      return Promise.resolve(json);
+    }
 
-    // @Delete(':id')
-    // async destroy(@Param('id') id): Promise<any> {
-    //   const json = {"flash":["success","User deleted"]};
-    //   return Promise.resolve(json);
-    // }  
+    @Delete(':id')
+    async destroy(): Promise<{}> {
+      const json = {"flash":["success","User deleted"]};
+      return Promise.resolve(json);
+    }  
 }

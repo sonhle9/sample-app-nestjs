@@ -20,10 +20,11 @@ import { RelationshipsController } from './relationships/relationships.controlle
 import { SessionsController } from './sessions/sessions.controller';
 import { PasswordResetsController } from './password-resets/password-resets.controller';
 import { BooksModule } from './books/books.module';
+import { PrismaService } from './prisma.service';
 
 @Module({
   imports: [MicropostsModule, AccountActivationsModule, PasswordResetsModule, RelationshipsModule, SessionsModule, UsersModule, BooksModule],
   controllers: [AppController, MicropostsController, AccountActivationsController, PasswordResetsController, RelationshipsController, SessionsController, UsersController],
-  providers: [AppService, MicropostsService, AccountActivationsService, PasswordResetsService, RelationshipsService, SessionsService, UsersService],
+  providers: [PrismaService, AppService, MicropostsService, AccountActivationsService, PasswordResetsService, RelationshipsService, SessionsService, UsersService],
 })
 export class AppModule {}

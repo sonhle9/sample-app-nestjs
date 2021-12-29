@@ -7,7 +7,8 @@ export class AppController {
 
   @Get()
   root() {
-    return {"feed_items":[{"id":449,"user_name":"Example User","user_id":1,"gravatar_id":"bebfcf57d6d8277d806a9ef3385c078d","size":50,"content":"dsf","timestamp":"4 days"},{"id":448,"user_name":"Example User","user_id":1,"gravatar_id":"bebfcf57d6d8277d806a9ef3385c078d","size":50,"content":"sadsad","timestamp":"6 days"},{"id":447,"user_name":"Example User","user_id":1,"gravatar_id":"bebfcf57d6d8277d806a9ef3385c078d","size":50,"content":"hgfhgfhg","timestamp":"25 days"},{"id":446,"user_name":"Example User","user_id":1,"gravatar_id":"bebfcf57d6d8277d806a9ef3385c078d","size":50,"content":"tfdtg","timestamp":"25 days"},{"id":445,"user_name":"Example User","user_id":1,"gravatar_id":"bebfcf57d6d8277d806a9ef3385c078d","size":50,"content":"ddsad","timestamp":"25 days"}],"total_count":116,"following":46,"followers":36,"micropost":66,"gravatar":"bebfcf57d6d8277d806a9ef3385c078d"};
+    return {"feed_items":[{"id":310,"user_name":"Example Userr","user_id":1,"gravatar_id":"bebfcf57d6d8277d806a9ef3385c078d","size":50,"content":"asdsa","timestamp":"about 5 hours"},{"id":309,"user_name":"Example Userr","user_id":1,"gravatar_id":"bebfcf57d6d8277d806a9ef3385c078d","size":50,"content":"dsadsa","timestamp":"10 days"},{"id":308,"user_name":"Example Userr","user_id":1,"gravatar_id":"bebfcf57d6d8277d806a9ef3385c078d","size":50,"content":"dsad","timestamp":"10 days"},{"id":307,"user_name":"Example Userr","user_id":1,"gravatar_id":"bebfcf57d6d8277d806a9ef3385c078d","size":50,"content":"sdsad","timestamp":"10 days"},{"id":306,"user_name":"Example Userr","user_id":1,"gravatar_id":"bebfcf57d6d8277d806a9ef3385c078d","size":50,"content":"asdasd","timestamp":"10 days"}],"total_count":260,"following":49,"followers":38,"micropost":60,"gravatar":"bebfcf57d6d8277d806a9ef3385c078d"};
+    // return this.appService.feedItems();
   }
 
   @Post('/login')
