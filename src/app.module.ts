@@ -19,9 +19,10 @@ import { MicropostsController } from './microposts/microposts.controller';
 import { RelationshipsController } from './relationships/relationships.controller';
 import { SessionsController } from './sessions/sessions.controller';
 import { PasswordResetsController } from './password-resets/password-resets.controller';
+import { BooksModule } from './books/books.module';
 
 @Module({
-  imports: [MicropostsModule, AccountActivationsModule, PasswordResetsModule, RelationshipsModule, SessionsModule, UsersModule],
+  imports: [MicropostsModule, AccountActivationsModule, PasswordResetsModule, RelationshipsModule, SessionsModule, UsersModule, BooksModule],
   controllers: [AppController, MicropostsController, AccountActivationsController, PasswordResetsController, RelationshipsController, SessionsController, UsersController],
   providers: [AppService, MicropostsService, AccountActivationsService, PasswordResetsService, RelationshipsService, SessionsService, UsersService],
 })
