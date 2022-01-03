@@ -8,4 +8,8 @@ export class AppService {
   feedItems() {
     return this.prisma.micropost.findMany()
   }
+
+  getHello(): string {
+    return 'Hello World!';
+  }
 }

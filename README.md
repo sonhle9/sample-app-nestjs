@@ -13,7 +13,8 @@ prisma generate ---> localhost:5555
 948 npx @nestjs/cli g module controllers/users & npx @nestjs/cli g controller controllers/users & npx @nestjs/cli g service controllers/users
 
 https://docs.nestjs.com/security/authentication
-curl -X POST http://localhost:3001/api/auth/login -d '{"username": "john", "password": "changeme"}' -H "Content-Type: application/json"
+curl -X POST http://localhost:3001/api/auth/login -d '{"username": "john@gmail.com", "password": "changeme"}' -H "Content-Type: application/json"
+curl http://localhost:3001/api/profile -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG5AZ21haWwuY29tIiwic3ViIjoxLCJpYXQiOjE2NDEyMjg1NzYsImV4cCI6MTY0MTIyODYzNn0.N0SZa4FZwr912ts0FVR1USj4-gh7VQcwcyqDCFswc1o"
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>

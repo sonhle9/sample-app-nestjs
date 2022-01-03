@@ -25,8 +25,10 @@ export class AppController {
 
   @UseGuards(JwtAuthGuard)
   @Get('profile')
-  getProfile(@Request() req) {
-    return req.user;
+  // getProfile(@Request() req) {
+  getProfile(): Promise<{}> {
+    const json = {"user":{"id":1,"name":"Example Userr","admin":true,"email":"example@railstutorial.org"}}
+    return Promise.resolve(json);
   }
 
   // @Post('/login')
@@ -37,5 +39,10 @@ export class AppController {
   @Delete('/logout')
   destroy() {
     return {};
+  }
+
+  @Get()
+  getHello(): string {
+    return this.appService.getHello();
   }
 }
