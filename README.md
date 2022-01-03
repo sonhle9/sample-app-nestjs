@@ -1,3 +1,20 @@
+$ npm i -g @nestjs/cli
+$ nest new sample-app-nestjs
+
+npm i -g @nestjs/cli
+prisma migrate dev --name init
+prisma generate ---> localhost:5555
+
+943 npx @nestjs/cli g module controllers/microposts & npx @nestjs/cli g controller controllers/microposts & npx @nestjs/cli g service controllers/microposts
+944 npx @nestjs/cli g module controllers/account-activations & npx @nestjs/cli g controller controllers/account-activations & npx @nestjs/cli g service controllers/account-activations
+945 npx @nestjs/cli g module controllers/password-resets & npx @nestjs/cli g controller controllers/password-resets & npx @nestjs/cli g service controllers/password-resets
+946 npx @nestjs/cli g module controllers/relationships & npx @nestjs/cli g controller controllers/relationships & npx @nestjs/cli g service controllers/relationships
+947 npx @nestjs/cli g module controllers/sessions & npx @nestjs/cli g controller controllers/sessions & npx @nestjs/cli g service controllers/sessions
+948 npx @nestjs/cli g module controllers/users & npx @nestjs/cli g controller controllers/users & npx @nestjs/cli g service controllers/users
+
+https://docs.nestjs.com/security/authentication
+curl -X POST http://localhost:3001/api/auth/login -d '{"username": "john", "password": "changeme"}' -H "Content-Type: application/json"
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>

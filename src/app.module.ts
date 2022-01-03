@@ -21,9 +21,10 @@ import { SessionsController } from './sessions/sessions.controller';
 import { PasswordResetsController } from './password-resets/password-resets.controller';
 import { BooksModule } from './books/books.module';
 import { PrismaService } from './prisma.service';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [MicropostsModule, AccountActivationsModule, PasswordResetsModule, RelationshipsModule, SessionsModule, UsersModule, BooksModule],
+  imports: [MicropostsModule, AccountActivationsModule, PasswordResetsModule, RelationshipsModule, SessionsModule, UsersModule, BooksModule, AuthModule],
   controllers: [AppController, MicropostsController, AccountActivationsController, PasswordResetsController, RelationshipsController, SessionsController, UsersController],
   providers: [PrismaService, AppService, MicropostsService, AccountActivationsService, PasswordResetsService, RelationshipsService, SessionsService, UsersService],
 })
