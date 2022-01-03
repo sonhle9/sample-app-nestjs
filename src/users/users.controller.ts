@@ -1,4 +1,5 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestjs/common';
+import { UserParams } from './dto/create-user.dto';
 
 @Controller('users')
 export class UsersController {
@@ -15,7 +16,8 @@ export class UsersController {
     }
 
     @Post('')
-    create(): Promise<{}> {
+    create(@Body() userParams: UserParams): Promise<{}> {
+      console.log(userParams);
       const json = {"flash":["info","Please check your email to activate your account."],"user":{}};
       return Promise.resolve(json);
     }

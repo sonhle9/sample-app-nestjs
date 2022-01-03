@@ -1,5 +1,5 @@
 import { Body, Controller, Delete, Logger, Param, Post, Req } from '@nestjs/common';
-import { CreateMicropostDto, MicropostParams } from './dto/create-micropost.dto';
+import { MicropostParams } from './dto/create-micropost.dto';
 import { MicropostsService } from './microposts.service';
 
 @Controller('microposts')
@@ -12,7 +12,7 @@ export class MicropostsController {
       // const json = {"flash":["success","Micropost created!"]};
       // return Promise.resolve(json);
       // this.logger.log(req.toString());
-      console.log(req);
+      // console.log(req);
       return this.micropostsService.create(micropostParams);
     }
 
