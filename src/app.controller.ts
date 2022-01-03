@@ -29,10 +29,10 @@ export class AppController {
     return req.user;
   }
 
-  @Post('/login')
-  create() {
-    return {"user":{"id":1,"name":"Example User","admin":true,"email":"example@railstutorial.org"},"jwt":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.V0z1TcfuH6MgWtsXxcz0cejD1e6ES3lvfF6uqtU6CAg","token":"GfWUAie__aW_uSF4cWi6_Q"};
-  }
+  // @Post('/login')
+  // create() {
+  //   return {"user":{"id":1,"name":"Example User","admin":true,"email":"example@railstutorial.org"},"jwt":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.V0z1TcfuH6MgWtsXxcz0cejD1e6ES3lvfF6uqtU6CAg","token":"GfWUAie__aW_uSF4cWi6_Q"};
+  // }
 
   @Delete('/logout')
   destroy() {

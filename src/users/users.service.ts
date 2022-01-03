@@ -10,7 +10,7 @@ export class UsersService {
     this.users = [
       {
         userId: 1,
-        username: 'john',
+        username: 'john@gmail.com',
         password: 'changeme',
       },
       {
