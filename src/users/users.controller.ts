@@ -1,8 +1,11 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestjs/common';
 import { UserParams } from './dto/create-user.dto';
+import { UsersService } from './users.service';
 
 @Controller('users')
 export class UsersController {
+  constructor(private readonly usersService: UsersService) {}
+
     @Get()
     index(): Promise<{}> {
       const json = {"users":[{"id":266,"name":"SOMETHING","gravatar_id":"0ad32065eee793c3b63d26070ad1a2d8","size":50},{"id":268,"name":"Abc","gravatar_id":"59b3234941691668aa090dc648ff88ee","size":50},{"id":269,"name":"Abc","gravatar_id":"cdf12a8e871311acf6cebe13acb5948b","size":50},{"id":281,"name":"Lol","gravatar_id":"b7fda7bb2324aaa937bae57c02b7b7e6","size":50},{"id":6,"name":"Tinisha Dickinson PhD","gravatar_id":"3cd98f56e3a0822a762c9a4b85fd5685","size":50}],"total_count":276};
@@ -18,8 +21,9 @@ export class UsersController {
     @Post('')
     create(@Body() userParams: UserParams): Promise<{}> {
       console.log(userParams);
-      const json = {"flash":["info","Please check your email to activate your account."],"user":{}};
-      return Promise.resolve(json);
+      // const json = {"flash":["info","Please check your email to activate your account."],"user":{}};
+      // return Promise.resolve({});
+      return this.usersService.create(userParams);
     }
 
     @Get(':id/edit')
